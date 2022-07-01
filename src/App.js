@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Header from './pages/Header';
+// import Header from './pages/Header';
 
 function App() {
   return (
@@ -13,8 +13,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="header" element={<Header />} />
+          {/* <Route path="home" element={<Home />} /> */}
+          {/* <Route path="header" element={<Header />} /> */}
+          <Route path="home" element={<Home />} />
+            
         </Routes>
       </Router>
     </div>
