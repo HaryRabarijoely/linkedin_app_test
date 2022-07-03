@@ -205,8 +205,14 @@ const Header = (props) => {
                         </NavList>
                         <NavList>
                             <a>
+                                <img src="/images/nav-network.svg" alt="" />
+                                <span>Mes Relations</span>
+                            </a>
+                        </NavList>
+                        <NavList>
+                            <a>
                                 <img src="/images/nav-jobs.svg" alt="" />
-                                <span>Posts</span>
+                                <span>Postes</span>
                             </a>
                         </NavList>
                         <NavList>
