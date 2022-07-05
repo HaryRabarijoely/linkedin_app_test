@@ -2,6 +2,9 @@
 import React from 'react';
 import Header from '../../components/Header';
 import styled from "styled-components";
+import Leftside from '../../components/Leftside';
+import Main from '../../components/Main';
+import Rightside from '../../components/Rightside';
 
 
 const Container = styled.div`
@@ -40,6 +43,20 @@ const Section = styled.section`
     
 // `
 
+const Layout = styled.div`
+    display: grid;
+    grid-template-areas: "leftside main rightside";
+    grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
+    column-gap: 25px;
+    row-gap: 25px;
+    margin: 25px 0;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 5px;
+    }
+`;
+
 const Home = (props) => {
     return (
         <Container>
@@ -51,7 +68,11 @@ const Home = (props) => {
             <p>Trouvez des pros talentueux en un temps record avec Upwork et maintenez vos affaires
           en mouvement.</p>
             </Section>
-            
+            <Layout>
+                <Leftside />
+                <Main />
+                <Rightside />
+            </Layout>
 
         </Container>
     );
