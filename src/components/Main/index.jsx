@@ -33,6 +33,32 @@ const ShareBox = styled(CommonCard)`
             background: transparent;
             border: none;
             display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+        &:first-child {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px 0px 16px;
+            img {
+                width: 48px;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+            button {
+                margin: 4px 0;
+                flex-grow: 1;
+                padding-left: 16px;
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                border-radius: 35px;
+                background-color: white;
+                text-align: left;
+            }
+        }
+        &:nth-child(2) {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 48px;
         }
     }
 `;
