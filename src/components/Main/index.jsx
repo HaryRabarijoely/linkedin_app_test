@@ -126,7 +126,68 @@ const SharedActor = styled.div`
         top: 0;
         background: transparent;
         border: none;
-        outline: none;
+        outline: none; 
+    }
+`;
+
+const Description = styled.div`
+    padding: 0 16px 0;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+    text-align: left;
+`;
+
+const SharedImg = styled.div`
+    margin-top: 8px;
+    width: 100%;
+    display: block;
+    position: relative;
+    background-color: #f9fafb;
+    img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;        
+    }
+`;
+
+const SocialCounts = styled.ul`
+    line-height: 1.3;
+    display: flex;
+    align-items: flex-start;
+    overflow: auto;
+    margin: 0 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9e5df;
+    list-style: none;
+    /* text-align: center; */
+    li {
+        margin-right: 5px;
+        font-size: 12px;
+        button {
+            display: flex;
+        }
+    }
+`;
+
+const SocialActions = styled.div`
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    min-height: 40px;
+    padding: 4px 8px;
+    button {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px;
+        color: #0a66c2;
+
+        @media(min-width: 768px) {
+            span {
+                margin-left: 8px;
+            }
+        }
     }
 `;
 
@@ -172,6 +233,42 @@ const Main = (props) => {
                             <img src="/images/ellipsis.svg" alt="" />
                         </button>
                     </SharedActor>
+                    <Description>Description</Description>
+                    <SharedImg>
+                        <a>
+                            <img src="/images/shared-image.jpg" alt="" />
+                        </a>
+                    </SharedImg>
+                    <SocialCounts>
+                        <li>
+                            <button>
+                                <img src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt="" />
+                                <img src="https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f" alt="" />
+                                <span>56</span>
+                            </button>
+                        </li>
+                        <li>
+                            <a>3 commentaires</a>
+                        </li>
+                    </SocialCounts>
+                    <SocialActions>
+                        <button>
+                            <img src="/images/like-icon.svg" alt="" />
+                            <span>Aimer</span>
+                        </button> 
+                        <button>
+                            <img src="/images/comments-icon.svg" alt="" />
+                            <span>Commenter</span>
+                        </button>
+                        <button>
+                            <img src="/images/share-icon1.svg" alt="" />
+                            <span>Partager</span>
+                        </button>
+                        <button>
+                            <img src="/images/send-icon.svg" alt="" />
+                            <span>Envoyer</span>
+                        </button>
+                    </SocialActions>
                 </Article>
             </div>
         </Container>
