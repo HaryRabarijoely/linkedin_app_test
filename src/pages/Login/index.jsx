@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
+import signInAPI from '../../actions';
 
 
 const Container = styled.div`
@@ -139,6 +141,15 @@ const Google = styled.div`
         color: rgba(0, 0, 0, 0.75);
     }
 `;
+
+const mapStateToProps = (state) => {
+    return {};
+};
+
+const mapDispatchToProps = (dispatch) => ({
+    signIn: () => dispatch(signInAPI()),
+});
+
 const Login = (props) => {
     return (
         <Container>
@@ -157,7 +168,7 @@ const Login = (props) => {
                     <img src="/images/login-hero.svg" alt="" />
                 </Hero>
                 <Form>
-                    <Google>
+                    <Google onClick={() => props.signIn()}>
                         <img src="/images/google.svg" alt="" />
                         S'identifier avec Google    
                     </Google>
@@ -167,4 +178,5 @@ const Login = (props) => {
     );
 };
 
-export default Login;
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
+
